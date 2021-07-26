@@ -18,6 +18,12 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
+          <link
+            rel="preload"
+            href="/fonts/SFProDisplay/SF-Pro.ttf"
+            as="font"
+            crossOrigin=""
+          />
           <title>Books</title>
         </Head>
         <body>

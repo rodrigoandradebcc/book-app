@@ -15,6 +15,14 @@ export default createGlobalStyle`
     --blue-twitter: #2aa9e0;
   }
 
+  @font-face {
+    font-family: "SFProDisplay";
+    src: url("/fonts/SFProDisplay/SF-Pro.ttf");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
+
   @media(max-width: 1080px){
     html{
       font-size: 93.75%;
@@ -56,7 +64,7 @@ export default createGlobalStyle`
   }
   
   body, input, textarea, button{
-    font: 400 1rem "Vollkorn", sans-serif;
+    font: 400 1rem "SFProDisplay", sans-serif;
   }
   
   button {

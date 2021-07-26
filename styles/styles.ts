@@ -24,6 +24,20 @@ export const ContentHome = styled.div`
     
 
 `
+
+export const BookItem = styled.div`
+    img{
+        flex: 1;
+    }
+`
+
+export const BookGrid = styled.div`
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 20px;
+    gap: 20px;
+`
+
 interface BookProps {
     background: string;
 }
