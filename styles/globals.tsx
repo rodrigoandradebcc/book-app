@@ -23,7 +23,7 @@ export default createGlobalStyle`
     font-display: swap;
   }
 
-  @media(max-width: 1080px){
+  /* @media(max-width: 1080px){
     html{
       font-size: 93.75%;
     }
@@ -33,7 +33,7 @@ export default createGlobalStyle`
     html{
       font-size: 87.5%;
     }
-  }
+  } */
   
   *{
     margin: 0;
