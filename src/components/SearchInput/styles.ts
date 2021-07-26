@@ -5,7 +5,6 @@ export const Input = styled.input`
     width: 100%;
 
     border: none;
-    background: var(--white);
 
     input:focus {
         border: none;
@@ -13,13 +12,13 @@ export const Input = styled.input`
 `;
 
 export const Container = styled.div`
-    background: #FDFCFC;
     display: flex;
-    box-shadow: 5px 5px 80px rgba(212, 173, 134, 0.122623);
+    /* box-shadow: 5px 5px 80px rgba(212, 173, 134, 0.122623); */
     border-radius: 10px;
     border: none;
     height: 48px;
     width: 100%;
+    background: var(--white);
     
     input{
         padding: 16px 10px;
@@ -43,4 +42,5 @@ export const ImgContainer = styled.div`
     display: flex;
     justify-content: center;
     margin-left: 16px;
+    background: #fff;
 `
