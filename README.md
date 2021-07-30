@@ -1,12 +1,5 @@
 ## Book App
 
-Primeiro, para instalar as dependências::
-
-```bash
-yarn
-```
-
-
 Para rodar a aplicação local:
 
 ```bash
@@ -26,3 +19,12 @@ https://www.figma.com/file/KFElqzD983WNyvMY1SaF0c/book-app?node-id=0%3A1
 ![image](https://user-images.githubusercontent.com/3511851/127692367-7520e59e-da4f-45a3-9d02-b9b7d986a0f3.png)
 
 ![image](https://user-images.githubusercontent.com/3511851/127692079-84694fcc-9c61-42d3-ab2e-b74e55d5f8f7.png)
+
+
+Primeiro, para instalar as dependências::
+
+```bash
+yarn
+```
+
+https://user-images.githubusercontent.com/13947203/114559257-eb55ad00-9c41-11eb-9617-4e7627cc373e.png
