@@ -17,6 +17,12 @@ yarn dev
 
 Abra [http://localhost:3000](http://localhost:3000) no seu browser
 
+![image](https://user-images.githubusercontent.com/3511851/127691817-855e110f-a8cb-46e1-a93d-cd0424130985.png)
+
+![image](https://user-images.githubusercontent.com/3511851/127691921-3a15ddf9-2e3e-46f8-8b73-2f85c68565cd.png)
+
+![image](https://user-images.githubusercontent.com/3511851/127691949-b8c39635-8a85-4b2a-b0cb-9e66820f7272.png)
+
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
 [API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.tsx`.
