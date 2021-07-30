@@ -1,5 +1,12 @@
 ## Book App
 
+
+Primeiro, para instalar as dependências::
+
+```bash
+yarn
+```
+
 Para rodar a aplicação local:
 
 ```bash
@@ -8,9 +15,7 @@ npm run dev
 yarn dev
 ```
 
-## Figma
 
-https://www.figma.com/file/KFElqzD983WNyvMY1SaF0c/book-app?node-id=0%3A1
 
 ## Abra [http://localhost:3000](http://localhost:3000) no seu browser
 
@@ -20,11 +25,9 @@ https://www.figma.com/file/KFElqzD983WNyvMY1SaF0c/book-app?node-id=0%3A1
 
 ![image](https://user-images.githubusercontent.com/3511851/127692079-84694fcc-9c61-42d3-ab2e-b74e55d5f8f7.png)
 
+## Figma
 
-Primeiro, para instalar as dependências::
+https://www.figma.com/file/KFElqzD983WNyvMY1SaF0c/book-app?node-id=0%3A1
 
-```bash
-yarn
-```
+![image](https://user-images.githubusercontent.com/3511851/127693005-84a8659d-1f5a-40ec-81a2-b882d2cfe48c.png)
 
-https://user-images.githubusercontent.com/13947203/114559257-eb55ad00-9c41-11eb-9617-4e7627cc373e.png
