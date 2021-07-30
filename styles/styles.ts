@@ -1,4 +1,28 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
+
+const slide = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`
+
+const slideRight = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(200px);
+
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`
 
 export const Container = styled.main`
     position: relative;
@@ -16,26 +40,68 @@ export const ContentHeader = styled.div`
     
     padding: 0 20px;
 
+    > div {
+        animation: ${slide} 0.8s ease-out;
+    }
+
+
     justify-content: center;
     margin-bottom: 30px;
 `
 
 export const ContentHome = styled.div`
-    
-
 `
+
+export const ImgCircleSmall = styled.div`
+    position: absolute;
+    z-index: 0;
+    top: -7px;
+    right: 110px;
+`
+
+export const Line = styled.div`
+    position: absolute;
+    bottom: 0px;
+    right: -23px;
+`
+
 
 export const BookItem = styled.div`
     img{
-        flex: 1;
+        max-width: 100%;
+        
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+
+    > p {
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 14px;
+        margin-top: 10px;
+
+
+        color: rgba(49, 49, 49, 0.8);
+    }
+
+    > p:last-child {
+        font-size: 10px;
+        line-height: 12px;
+        margin-top: 5px;
+
+
+        color: rgba(49, 49, 49, 0.8);
     }
 `
 
 export const BookGrid = styled.div`
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 0 20px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
     gap: 20px;
+    margin: 0 20px;
 `
 
 interface BookProps {
@@ -44,8 +110,19 @@ interface BookProps {
 
 export const Book = styled.div<BookProps>`
     background: ${props => props.background};
+    
+    height: 139px;
     min-width: 272px;
-    height: 140px;
+
+    display: flex;
+
+
+    &:last-child{
+        height: 128px;
+        min-width: 250px;
+    }
+    
+    width: 272px;
     box-shadow: 2px 4px 48px rgba(154, 175, 209, 0.62134);
     border-radius: 5px;
 
@@ -55,10 +132,16 @@ export const Book = styled.div<BookProps>`
 `
 
 export const Books = styled.div`
+    animation: ${slideRight} 1s ease-out;
+
+    background: #FFFCF9;
     display: flex;
+    align-items: center;
     width: 100%;
-    overflow-x: auto;
+
+    overflow-x: auto;//Teste
     overflow-y: hidden;
+    position: relative;
 
     margin-left: 20px;    
 
@@ -75,24 +158,49 @@ export const TitleBook = styled.h1`
     letter-spacing: 2px;
 
     color: #FEFEFE;
+    font-family: Playfair Display;
+font-style: normal;
+font-weight: bold;
+font-size: 27px;
+line-height: 36px;
+/* identical to box height */
+
+letter-spacing: 2px;
+
+color: #FEFEFE;
 `
 
 export const TitleHello = styled.div`
     margin-left: 20px;
     display:flex;
+
+    animation: ${slide} 0.8s ease-out;
+
+
+    h1:first-child{
+        color: #54565A;
+
+    }
+
     h1{
         font-size: 24px;
         line-height: 29px;
-        color: #54565A;
+        color: #FF6978;
     }
 
-    h1:last-child {
-        margin-left: 2px;
-        color: #FF6978;
+    h1:nth-child(2) {
+        margin-left: 6px;
+    }
+
+    > div{
+        margin-left: 10px;
     }
 `
 
 export const SectionTitle = styled.section`
+
+    animation: ${slide} 0.8s ease-out;
+
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -101,12 +209,18 @@ export const SectionTitle = styled.section`
     align-items: center;
 
 
-    > h3 {
-        font-weight: 500;
+    > h1 {
+        font-weight: 600;
         font-size: 18px;
         line-height: 21px;
         letter-spacing: 0.5px;
         color: #3F4043;
+
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 0.5px;
     }
 
     > a {
@@ -124,20 +238,30 @@ export const SubtitleBook = styled.h4`
     line-height: 16px;
 
     letter-spacing: 1.28889px;
+    font-style: italic;
+    font-weight: 400;
 
     color: #E7E7E1;
     margin-top: 5px;
 `
 
 export const ReadNumber = styled.h4`
-    font-style: normal;
-    font-weight: bold;
-    font-size: 10px;
-    line-height: 12px;
+   
 
-    letter-spacing: 0.020635px;
+    display: flex;
+    align-items: center;
 
     color: #E7E7E1;
+
+    > p {
+        margin-left: 2px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 12px;
+
+        letter-spacing: 0.020635px;
+    }
 `
 
 export const TextRed = styled.p`
@@ -160,19 +284,13 @@ export const TextChapter = styled.p`
     color: #2A2B26;
 `
 
+export const BookCurrentBox = styled.div`
 
-
-export const BookCurrent = styled.div`
-    flex: 1;
-    margin-right: 44px;
-    height: 100px;
-    background: #EEF5DB;
-    padding-left: 118px;
+    animation: ${slideRight} 1s ease-out;
 
     position: relative;
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
+    overflow: hidden;
+
     > h4 {
         font-weight: normal;
         font-size: 10px;
@@ -192,6 +310,23 @@ export const BookCurrent = styled.div`
         color: #2A2B26;
         margin-top: 10px;
     }
+`
+
+
+
+export const BookCurrent = styled.div`
+
+    flex: 1;
+    margin-right: 44px;
+    height: 100px;
+    background: #EEF5DB;
+    padding-left: 118px;
+
+    position: relative;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    
 
     margin-bottom: 45px;
 `
@@ -201,6 +336,7 @@ export const IconAndChapter = styled.div`
     align-items: center;
 
     margin-top: 20px;
+
 
     p {
         margin-left: 2px;
@@ -213,22 +349,35 @@ export const ImageDiv = styled.div`
     left: 0;
     min-width: 88px;
     min-height: 130px;
+
+    animation: ${slide} 1s ease-out;
+`
+export const ImageDivTriangle = styled.div`
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    z-index: 1;
 `
 
+
 export const ImageReviewContainer = styled.div`
+
     margin-top: 16px;
     display: flex;
     flex: 1;
     padding: 0 20px;
 
     img {
+    animation: ${slideRight} 1s ease-out;
+
         width: 100%;
         height: 100%;
     }
 `
 
 
-export const TextAndSubtitle = styled.div``
+export const TextAndSubtitle = styled.div`
+`
 
 export const TextAndReadNumber = styled.div`
     display: flex;
@@ -242,8 +391,8 @@ export const TextAndImage = styled.div`
 
     justify-content: space-between;
     padding: 15px 20px;
-
 `
+
 
 export const NavigationBar = styled.div`
     background: var(--white);
@@ -256,20 +405,17 @@ export const NavigationBar = styled.div`
     width: 100%;
 
     > button:nth-child(1) svg {
-        width: 26px;
-        height: 17.78px;
+        
         margin-bottom: 10px;
     }
 
     > button:nth-child(2) svg {
-        width: 14.4px;
-        height: 18px;
+        
         margin-bottom: 10px;
     }
 
     > button:nth-child(3) svg {
-        width: 16px;
-        height: 18px;
+        
         margin-bottom: 10px;
     }
 `
@@ -321,7 +467,7 @@ export const TitleReview = styled.h1`
 
 `
 
-export const TitleReviewViews = styled.p`
+export const TitleReviewViews = styled.div`
     font-weight: normal;
     font-size: 10px;
     line-height: 9px;
@@ -330,8 +476,25 @@ export const TitleReviewViews = styled.p`
 
     color: rgba(106, 103, 103, 0.8);
     margin-left: 32px;
+    span{
+        & + span {
+        margin-left: 0.5rem;
+        padding-left: 0.5rem;
+        position: relative;
 
-    
+        &::before {
+          content: "";
+          width: 2px;
+          height: 2px;
+          border-radius: 2px;
+          background: #6A6767;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
 `
 
 export const TextContent = styled.p`
@@ -343,7 +506,40 @@ export const TextContent = styled.p`
     margin-top: 6px;
 
     color: rgba(107, 107, 107, 0.8);
-
    
 `
 
+export const HomeCircleImg = styled.div`
+    position: absolute;
+
+    top: -20px;
+    right: -32px;
+`
+
+export const HomeCircleHead = styled.div`
+    position: absolute;
+
+    top: -40px;
+    right: 0;
+`
+
+export const CircleHookedImg = styled.div`
+    position: absolute;
+    top: -2px;
+    left: -35px;
+    z-index: 1;   
+`
+
+export const LineImgHooked = styled.div`
+    position: absolute;
+    bottom: 12px;
+    left: -35px;
+    z-index: 1;  
+
+`
+
+
+export const ImgCircle = styled.div`    
+    width: 73px;
+    position: relative;    
+`

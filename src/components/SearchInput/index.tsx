@@ -9,12 +9,11 @@ interface InternalProps {
 }
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  searchState(event: any): void;
   debounce({ internalFunction, event }: InternalProps): void;
   filterBooks(name?: string): Promise<void>
 }
 
-function SearchInput({searchState, debounce, filterBooks: filterUsers, ...rest}:InputProps) {
+function SearchInput({debounce, filterBooks: filterUsers, ...rest}:InputProps) {
   return (
     <Container>
       <ImgContainer>

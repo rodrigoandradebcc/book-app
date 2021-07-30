@@ -1,41 +1,3 @@
-// import Document, { Head, Main, NextScript } from 'next/document';
-// import { ServerStyleSheet } from 'styled-components';
-
-// export default class MyDocument extends Document {
-//   static getInitialProps({ renderPage }: any) {
-//     const sheet = new ServerStyleSheet();
-
-//     const page = renderPage((App: any) => (props: any) =>
-//       sheet.collectStyles(<App {...props} />),
-//     );
-
-//     const styleTags = sheet.getStyleElement();
-
-//     return { ...page, styleTags };
-//   }
-
-//   render() {
-//     return (
-//       <html>
-//         <Head>
-//           <link
-//             rel="preload"
-//             href="/fonts/SFProDisplay/SF-Pro.ttf"
-//             as="font"
-//             crossOrigin=""
-//           />
-//           <title>Books</title>
-//         </Head>
-//         <body>
-//           <Main />
-//           <NextScript />
-//         </body>
-//       </html>
-//     );
-//   }
-// }
-
-
 import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
@@ -76,6 +38,10 @@ export default class MyDocument extends Document {
                 as="font"
                 crossOrigin=""
               />
+
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+            <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
               {/* <title>Books</title> */}
             </Head>
             <body>
