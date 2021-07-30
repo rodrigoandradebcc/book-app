@@ -25,6 +25,8 @@ yarn dev
 
 ![image](https://user-images.githubusercontent.com/3511851/127692079-84694fcc-9c61-42d3-ab2e-b74e55d5f8f7.png)
 
+![Untitled_ Jul 30, 2021 5_53 PM (1)](https://user-images.githubusercontent.com/3511851/127711317-68354ef5-db40-4a39-813d-200663b1e2f8.gif)
+
 ## Figma
 
 https://www.figma.com/file/KFElqzD983WNyvMY1SaF0c/book-app?node-id=0%3A1
