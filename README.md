@@ -1,6 +1,11 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Book App
 
-## Getting Started
+Primeiro, para instalar as dependências::
+
+```bash
+yarn
+```
+
 
 First, run the development server:
 
