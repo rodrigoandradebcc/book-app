@@ -7,7 +7,7 @@ yarn
 ```
 
 
-First, run the development server:
+Para rodar a aplicação local:
 
 ```bash
 npm run dev
@@ -15,7 +15,7 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) no seu browser
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
