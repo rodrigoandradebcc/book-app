@@ -31,3 +31,14 @@ https://www.figma.com/file/KFElqzD983WNyvMY1SaF0c/book-app?node-id=0%3A1
 
 ![image](https://user-images.githubusercontent.com/3511851/127693005-84a8659d-1f5a-40ec-81a2-b882d2cfe48c.png)
 
+
+## 🧪 Tecnologias
+
+Esse projeto utilizou as seguintes techs: 
+
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Styled Components](https://styled-components.com/)
+
+
