@@ -21,7 +21,7 @@ Abra [http://localhost:3000](http://localhost:3000) no seu browser
 
 ![image](https://user-images.githubusercontent.com/3511851/127691921-3a15ddf9-2e3e-46f8-8b73-2f85c68565cd.png)
 
-![image](https://user-images.githubusercontent.com/3511851/127691949-b8c39635-8a85-4b2a-b0cb-9e66820f7272.png)
+![image](https://user-images.githubusercontent.com/3511851/127692007-86462bd4-19ee-459b-8555-589fa7fc5ad0.png)
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
