@@ -15,7 +15,7 @@ import triangle from '../../public/images/triangle.svg'
 import iconBook from '../../public/images/iconBook.svg'
 import homeCircle from '../../public/images/homeCircle.svg'
 import smallCircle from '../../public/images/smallCircle.svg'
-import CircleLargeHooked from '../../public/images/CircleLargeHooked.svg'
+import circleLargeHooked from '../../public/images/CircleLargeHooked.svg'
 import graph from '../../public/images/graph.svg'
 import bye from '../../public/images/bye.svg'
 import * as S from '../../styles/styles'
@@ -168,9 +168,7 @@ export default function Home() {
 
               <S.Line>
                 <Image src={line} alt="line"/>
-              </S.Line>
-
-    
+              </S.Line>  
               <h1>Originals</h1>
               <h4>by Adam Grant</h4>
               <S.IconAndChapter>
@@ -229,19 +227,23 @@ export default function Home() {
                       pathname: '/details',
                     })
                 }}>
-                  <img  
-                    src={
-                      `${book?.volumeInfo.imageLinks?.thumbnail 
-                      ? book?.volumeInfo.imageLinks.thumbnail : 
-                      'https://snack.expo.dev/dist/assets/bc351fd24f9bd32bc131f122d42c1a77.svg'}`
-                    }
-                  />
+                  <div>
+                    <img  
+                      src={
+                        `${book?.volumeInfo.imageLinks?.thumbnail 
+                        ? book?.volumeInfo.imageLinks.thumbnail : 
+                        'https://snack.expo.dev/dist/assets/bc351fd24f9bd32bc131f122d42c1a77.svg'}`
+                      }
+                    />
+                  </div>
+                  
                   <p>{book.volumeInfo.title}</p>
                   <p>{book.volumeInfo.authors && `by ${book.volumeInfo.authors[0]}`}</p>
                 </S.BookItem>
               )
           }
           )}
+          
         </S.BookGrid>
       )}
       

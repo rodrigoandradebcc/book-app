@@ -1,5 +1,4 @@
 import styled, {keyframes} from 'styled-components';
-
 const slide = keyframes`
   from {
     opacity: 0;
@@ -71,9 +70,26 @@ export const BookItem = styled.div`
         max-width: 100%;
         
     }
+
+    div {
+        height: 100%;
+        display:flex;
+
+        max-height: 167px;
+
+        @media (max-width: 366px) {
+            max-height: initial;
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+
+        background: green;
+    }
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 
 
 
@@ -98,6 +114,14 @@ export const BookItem = styled.div`
 `
 
 export const BookGrid = styled.div`
+    @media (max-width: 412px) {
+        grid-template-columns: repeat(auto-fit, 94px); 
+    }
+
+    @media (max-width: 366px) {
+        grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    }
+    
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, auto));
     gap: 20px;
@@ -110,6 +134,10 @@ interface BookProps {
 
 export const Book = styled.div<BookProps>`
     background: ${props => props.background};
+
+    /* @media (min-width: 1220px) {
+        
+    } */
     
     height: 139px;
     min-width: 272px;
@@ -139,7 +167,7 @@ export const Books = styled.div`
     align-items: center;
     width: 100%;
 
-    overflow-x: auto;//Teste
+    overflow-x: auto;
     overflow-y: hidden;
     position: relative;
 
@@ -159,15 +187,14 @@ export const TitleBook = styled.h1`
 
     color: #FEFEFE;
     font-family: Playfair Display;
-font-style: normal;
-font-weight: bold;
-font-size: 27px;
-line-height: 36px;
-/* identical to box height */
+    font-style: normal;
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 36px;
 
-letter-spacing: 2px;
+    letter-spacing: 2px;
 
-color: #FEFEFE;
+    color: #FEFEFE;
 `
 
 export const TitleHello = styled.div`
@@ -207,7 +234,6 @@ export const SectionTitle = styled.section`
     margin-top: 30px;
     padding: 0 20px;
     align-items: center;
-
 
     > h1 {
         font-weight: 600;
@@ -350,7 +376,7 @@ export const ImageDiv = styled.div`
     min-width: 88px;
     min-height: 130px;
 
-    animation: ${slide} 1s ease-out;
+    animation: ${slide} 1.8s ease-out;
 `
 export const ImageDivTriangle = styled.div`
     position: absolute;
@@ -538,8 +564,9 @@ export const LineImgHooked = styled.div`
 
 `
 
-
 export const ImgCircle = styled.div`    
     width: 73px;
     position: relative;    
 `
+
+export const BookSkeleton = styled.div``    

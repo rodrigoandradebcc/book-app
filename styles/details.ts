@@ -1,4 +1,52 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const slide = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`
+
+const slideRight = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(200px);
+
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`
+
+const slideDown = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`
+
+const slideUp = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`
 
 export const ContainerDetails = styled.section`
     height: 100vh;
@@ -6,14 +54,14 @@ export const ContainerDetails = styled.section`
     position: relative;
 `
 
-
 export const HeaderRectangle = styled.header`
     height: 282px;
     background: #FFF6E5;
     border-radius: 0 0 100px 0;
     position: relative;
     
-
+    animation: ${slideDown} 0.8s ease-out;
+    
     > svg{
         margin: 55px 0 0 32px;
     }
@@ -38,6 +86,9 @@ export const ImageDiv = styled.div`
 
 export const Text = styled.div`
     margin: 20px;
+
+    animation: ${slide} 1.6s ease-out;
+
 `
 
 
@@ -91,6 +142,8 @@ export const MenuBottom = styled.div`
     align-items: center;
     justify-content: space-between;
     z-index: 1;
+
+    animation: ${slideUp} 1s ease-out;
 `
 
 export const BtnMenu = styled.button`
